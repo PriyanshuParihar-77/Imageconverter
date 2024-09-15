@@ -103,10 +103,9 @@ const UploadController: React.FC = () => {
       <h1 className="text-4xl font-bold mb-8">Image Converter</h1>
 
       <div className="bg-slate-800 rounded-lg p-8 shadow-lg w-96 flex flex-col justify-center items-center">
-        {/* Choose file button */}
+        {/* Upload File button */}
         <label className="flex items-center cursor-pointer w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg mb-4 justify-center">
-          <CloudUploadIcon className="h-5 w-5 mr-2" />
-          Choose File
+          Upload File
           <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
         </label>
 
@@ -147,8 +146,8 @@ const UploadController: React.FC = () => {
           onClick={handleUpload}
           className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg mb-4 flex items-center justify-center"
         >
-          <CloudUploadIcon className="h-5 w-5 mr-2" />
-          Upload Image
+        
+          Process Image
         </button>
 
         {uploadSuccess && (

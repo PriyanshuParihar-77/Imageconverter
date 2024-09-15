@@ -98,13 +98,13 @@ const UploadController: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center" style={{ backgroundColor: 'olive', color: 'white' }}>
+    <div className="min-h-screen flex flex-col items-center justify-center" style={{ backgroundColor: '#fdf5df', color: '#5ebec4' }}>
       {/* Branding */}
       <h1 className="text-4xl font-bold mb-8">Image Converter</h1>
 
-      <div className="bg-slate-800 rounded-lg p-8 shadow-lg w-96 flex flex-col justify-center items-center">
+      <div className="bg-white rounded-lg p-8 shadow-lg w-96 flex flex-col justify-center items-center">
         {/* Upload File button */}
-        <label className="flex items-center cursor-pointer w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg mb-4 justify-center">
+        <label className="flex items-center cursor-pointer w-full" style={{ backgroundColor: '#f92c85', color: 'white', fontWeight: 'bold', padding: '10px 20px', borderRadius: '8px', marginBottom: '16px', justifyContent: 'center' }}>
           Upload File
           <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
         </label>
@@ -113,22 +113,22 @@ const UploadController: React.FC = () => {
 
         <div className="w-full mb-4">
           <label>Brightness:</label>
-          <input type="range" value={brightness} min="0" max="2" step="0.1" onChange={(e) => setBrightness(parseFloat(e.target.value))} className="w-full" />
+          <input type="range" value={brightness} min="0" max="2" step="0.1" onChange={(e) => setBrightness(parseFloat(e.target.value))} className="w-full" style={{ accentColor: '#f92c85' }} />
         </div>
 
         <div className="w-full mb-4">
           <label>Contrast:</label>
-          <input type="range" value={contrast} min="0" max="2" step="0.1" onChange={(e) => setContrast(parseFloat(e.target.value))} className="w-full" />
+          <input type="range" value={contrast} min="0" max="2" step="0.1" onChange={(e) => setContrast(parseFloat(e.target.value))} className="w-full" style={{ accentColor: '#f92c85' }} />
         </div>
 
         <div className="w-full mb-4">
           <label>Saturation:</label>
-          <input type="range" value={saturation} min="0" max="2" step="0.1" onChange={(e) => setSaturation(parseFloat(e.target.value))} className="w-full" />
+          <input type="range" value={saturation} min="0" max="2" step="0.1" onChange={(e) => setSaturation(parseFloat(e.target.value))} className="w-full" style={{ accentColor: '#f92c85' }} />
         </div>
 
         <div className="w-full mb-4">
           <label>Rotation:</label>
-          <input type="range" value={rotation} min="0" max="360" step="1" onChange={(e) => setRotation(parseFloat(e.target.value))} className="w-full" />
+          <input type="range" value={rotation} min="0" max="360" step="1" onChange={(e) => setRotation(parseFloat(e.target.value))} className="w-full" style={{ accentColor: '#f92c85' }} />
         </div>
 
         {uploadProgress > 0 && (
@@ -144,9 +144,9 @@ const UploadController: React.FC = () => {
 
         <button
           onClick={handleUpload}
-          className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg mb-4 flex items-center justify-center"
+          className="w-full" 
+          style={{ backgroundColor: '#f92c85', color: 'white', fontWeight: 'bold', padding: '10px 20px', borderRadius: '8px', marginBottom: '16px', justifyContent: 'center' }}
         >
-        
           Process Image
         </button>
 
